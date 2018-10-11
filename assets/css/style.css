@@ -1,0 +1,80 @@
+.jumbotron {
+	background-color: #c60303;
+	color: white;
+	border-radius: 5px;
+}
+
+body {
+	margin: 10px;
+}
+
+form {
+	font-weight: bold;
+}
+
+input {
+	width: 98%;
+	height: 35px;
+	border: 1px solid black;
+	margin: 5px;
+	margin-left: 0;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.panel-default {
+	border: none;
+}
+
+.panel-default>.panel-heading {
+	background-color: #112977;
+	color: white;
+	border: 1px solid black;
+}
+
+.panel-default>.panel-body {
+	padding: 1px;
+	border: 1px solid black;
+    border-radius: 0px 0px 5px 5px;
+
+} 
+
+.delete {
+	border-radius: 5px;
+	border: 1px solid #112977;
+	background-color: #c60303;
+	color: white;
+}
+
+.delete:hover {
+	background-color: #4286f4;
+
+}
+#notLoggedIn {
+	display: none;
+}
+
+#logInButton {    
+	background-color: #251177;
+    color: white;
+}
+
+#trains {
+	padding: 10px;
+}
+
+#formSubmit {
+	background-color: #251177;
+	color: white;
+	margin: 0px 0px 10px 10px;
+}
+
+#firstTrain-input:valid {
+	color: green;
+	border-color: black;
+}
+
+#firstTrain-input:invalid {
+	color: red;
+	border-color: red;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Train Times</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>			
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="shortcut icon" href="assets/images/train.ico" type="image/x-icon">
+</head>
+<header>
+	<div class="jumbotron">
+	  <h1 class="text-center">Train Times</h1>
+	  <p id="currentTime" class="text-center">Times for trains that'll take you nowhere!!</p>
+	</div>
+</header>
+
+<body>
+	<div class="text-center" id="notLoggedIn">
+		<button class="btn btn-default" id="logInButton">
+			Log In with Google
+		</button>
+	</div>
+	
+<!-- ++++++++++++++++++ Display Once Logged In +++++++++++++++++++++++++++++ -->
+	<container id="loggedIn">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		  	<h3 class="panel-title">Current Train Times</h3>
+		  </div>
+		  <div class="panel-body">
+		    <table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Train Name</th>
+						<th scope="col">Destination</th>
+						<th scope="col">Frequency (minutes)</th>
+						<th scope="col">Next Arrival</th>
+						<th scope="col">Minutes Away</th>
+					</tr>				
+				</thead>
+				<tbody id="userData">
+				</tbody>
+		    </table>
+		  </div>
+		</div>
+
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Add A Train</h3>
+		  </div>
+		  <div class="panel-body">
+		    <form id="trains">
+
+		    	Train Name: <br>	
+		    	<input 
+			    	type="text" 
+			    	id="name-input" 
+			    	name="name">
+		    	<br>
+
+		    	Destination: <br>	
+		    	<input 
+			    	type="text" 
+			    	id="destination-input" 
+			    	name="destination">
+		    	<br>
+
+		    	First Train Time (Military Time: HH:MM): <br>
+		    	<input 
+			    	type="text" 
+			    	id="firstTrain-input" 
+			    	name="firstTrain" 
+			    	title="Military time HH:MM" 
+			    	pattern="^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$">
+		    	<br>
+
+		    	Frequency (min): <br>
+		    	<input 
+			    	type="number" 
+			    	id="frequency-input" 
+			    	name="frequency">
+		    	<br>	
+
+		    </form>
+		    <button 
+			    type="submit" 
+			    id="formSubmit" 
+			    class="btn" 
+			    value="submit">Submit
+			</button>   
+		  </div>
+		</div>
+	</container>	
+	<script src="assets/javascript/app.js" type="text/javascript"></script>
+</body>
+</html>
